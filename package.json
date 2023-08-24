@@ -1,7 +1,7 @@
 {
   "name": "weather-full-stack",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Basic jQuery, NodeJS &amp; MongoDB project template",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,11 +16,17 @@
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.5",
     "body-parser": "^1.18.3",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
+    "firebase": "^10.3.0",
     "handlebars": "^4.0.12",
     "jquery": "^3.3.1",
     "moment": "^2.23.0",
     "mongoose": "^5.4.0",
     "request": "^2.88.0"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "keywords": []
 }

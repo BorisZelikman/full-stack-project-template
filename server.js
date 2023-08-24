@@ -1,26 +1,11 @@
-const express = require('express')
-const path = require('path')
-const mongoose = require('mongoose')
-const bodyParser = require('body-parser')
-const api = require('./server/routes/api')
+const express = require('express'); //Строка 1
+const app = express(); //Строка 2
+const port = process.env.PORT || 5000; //Строка 3
 
-//comment
+// Сообщение о том, что сервер запущен и прослушивает указанный порт 
+app.listen(port, () => console.log(`Listening on port ${port}`)); //Строка 6
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mydb', { useNewUrlParser: true })
-
-const app = express()
-
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
-
-app.use(express.static(path.join(__dirname, 'dist')))
-app.use(express.static(path.join(__dirname, 'node_modules')))
-
-
-app.use('/', api)
-
-const port = 8888
-
-app.listen(process.env.PORT || port, function() {
-    console.log(`Runnin runnin and runnin runnin on port ${port}`)
-})
+// Создание GET маршрута
+app.get('/express_backend', (req, res) => { //Строка 9
+  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); //Строка 10
+}); //Строка 11
