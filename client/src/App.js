@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import StartStopButton from './components/StartStopButton'
+import CreateNote from './CreateNote';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <div className="App">
+      <CreateNote />
       <header className="App-header">
         <StartStopButton />
       </header>
